@@ -1,0 +1,26 @@
+{
+  "name": "{{source}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+{{repo_url}}.git"
+  },
+  "keywords": [],
+  "author": "R2T Tecnologia Inteligente",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0"
+  }
+}
