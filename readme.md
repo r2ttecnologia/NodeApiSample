@@ -7,7 +7,7 @@ Descrição
 
 Ambiente
 --------
-
+* Node.JS V.8 ou superior
 
 Bugs Conhecidos
 ---------------
