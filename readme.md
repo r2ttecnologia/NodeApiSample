@@ -1,8 +1,6 @@
 {{title}}
 ==========
 
-![Build Status]({{repo_url}}/badges/master/build.svg)
-
 Descrição
 ---------
 **{{description}}**
