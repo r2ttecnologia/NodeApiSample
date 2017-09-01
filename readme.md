@@ -1,6 +1,15 @@
 {{title}}
 ==========
 
+Ficha Técnica
+-------------
+| Código | {{code}} |
+|--------|----------|
+| Versão | 1.0.0 |
+| Plataforma | Node JS |
+| Banco de dados | |
+| Criação | {{timestamp}} UTC-3 |
+
 Descrição
 ---------
 **{{description}}**

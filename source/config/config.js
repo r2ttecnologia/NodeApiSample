@@ -1,8 +1,18 @@
 //Importação do módulos
-var bodyparser = require('body-parser');
-var express = require('express');
-var https = require('https');
-var fs = require('fs');
+const bodyparser = require('body-parser');
+const mongoose = require('mongoose');
+const express = require('express');
+const helmet = require('helmet');
+const https = require('https');
+const fs = require('fs');
+
+// Strings de configuração
+const dbhost = 'localhost';
+const dbuser = 'user';
+const dbpass = 'pass';
+const dbname = 'db';
+const port = 8080;
+const dbconn = String.format("mongodb://{0}/{1}", dbhost, dbname);
 
 /*
 //Servidor https
@@ -30,6 +40,7 @@ var app = express();
 //Configuração dos objetos
 //Executar filtragem nas requisições
 app.use(allowCors);
+app.use(helmet);
 
 // parse application/x-www-form-urlencoded                                    
 app.use(bodyparser.urlencoded({
@@ -40,8 +51,12 @@ app.use(bodyparser.urlencoded({
 app.use(bodyparser.json());
 
 //Cria um servidor https
-//https.createServer(options, app).listen('9000');
-app.listen(9000);
+//https.createServer(options, app).listen(port.toString());
+app.listen(port);
+
+//Conecta ao mongodb
+mongoose.connect(dbconn, {user:dbuser, pass:dbpass, useMongoClient:true});
 
 //Exporta o módulo configurado
-module.exports = app;
+module.exports.app = app;
+module.exports.mongoose = mongoose;
