@@ -28,9 +28,8 @@ const options = {
 const allowCors = function (req, res, next) {
     //Acesso apenas da rede local
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'POST');
+    res.header('Access-Control-Allow-Methods', 'DELETE,GET,PATCH,POST,PUT');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    res.header('Access-Control-Allow-Credentials', 'true');
     next();
 };
 
@@ -40,7 +39,7 @@ var app = express();
 //Configuração dos objetos
 //Executar filtragem nas requisições
 app.use(allowCors);
-app.use(helmet);
+app.use(helmet());
 
 // parse application/x-www-form-urlencoded                                    
 app.use(bodyparser.urlencoded({

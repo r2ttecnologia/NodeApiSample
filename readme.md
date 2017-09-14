@@ -12,7 +12,7 @@ Ficha Técnica
 
 Descrição
 ---------
-**{{description}}**
+> {{description}}
 
 Ambiente
 --------
@@ -38,4 +38,4 @@ Lista de Diretórios
 * Para os módulos _https_ insira os arquivos *key.pem* e *cert.pem* na pasta onde está o index do serviço.
 
 ## Observações ##
-**Para os testes unitários use nodeunit ``npm i -g nodeunit``**
+> **Para os testes unitários use nodeunit ``npm i -g nodeunit``**
