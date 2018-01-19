@@ -1,0 +1,17 @@
+{
+    "apps": [{
+        "name":"{{title}}",
+        "script":"index.js",
+        "watch":true,
+        "exec_mode":"cluster",
+        "instances":0,
+        "wait_ready": true,
+        "listen_timeout": 10000,
+        "kill_timeout": 5000,
+        "env":{
+            "stage":"prod",
+            "debug":"2",
+            "firstrun":"false"
+        }
+    }]
+}
